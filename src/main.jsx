@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Today from "./pages/Today";
 import Recipe from "./pages/Recipe";
+import RecipeDetail from "./pages/RecipeDetail";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="signup" element={<SignUp />} />
             <Route path="today" element={<Today />} />
             <Route path="recipe" element={<Recipe />} />
+            <Route path="cocktails/:slug" element={<RecipeDetail />} />
           </Route>
         </Route>
       </Routes>
