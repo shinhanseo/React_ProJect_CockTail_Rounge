@@ -11,6 +11,7 @@ import SignUp from "./pages/SignUp";
 import Today from "./pages/Today";
 import Recipe from "./pages/Recipe";
 import RecipeDetail from "./pages/RecipeDetail";
+import CommunityDetail from "./pages/CommunityDetail";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="today" element={<Today />} />
             <Route path="recipe" element={<Recipe />} />
             <Route path="cocktails/:slug" element={<RecipeDetail />} />
+            <Route path="posts/:id" element={<CommunityDetail />} />
           </Route>
         </Route>
       </Routes>

@@ -7,9 +7,9 @@ export default function RecipeDetail() {
   const cocktail = cocktails.find(c => c.slug === slug);
 
   return (
-    <article className="text-white max-w-4xl mx-auto flex gap-6">
-			<div className="flex-1">
-				<NavLink to="/recipe" className="text-sm underline text-white/70">
+    <article className="text-white max-w-4xl mx-auto flex gap-6 border-white/10 bg-white/5 rounded-4xl p-12 mt-12">
+	    <div className="flex-1">
+				<NavLink to="/recipe" className="text-sm text-white/70 hover:font-bold">
 					← 목록으로
 				</NavLink>
 

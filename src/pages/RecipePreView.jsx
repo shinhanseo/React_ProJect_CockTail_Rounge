@@ -1,42 +1,22 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { cocktails } from "../data/cocktails";
 
-const tema = {
-  season: [
-    "오늘 같은 가을밤에 어울리는 칵테일🍂",
-    "겨울밤을 따뜻하게 해줄 핫 칵테일 추천 ❄️",
-    "여름밤 시원하게 즐기는 모히토 vs 진토닉 🏖️",
-    "봄꽃 피는 날, 플로럴 칵테일 3선 🌸",
-  ],
-  mood: [
-    "혼술할 때 딱 좋은 간단 칵테일 🍸",
-    "파티에서 인기 폭발! 인스타 감성 칵테일 🎊",
-    "연인과 특별한 날에 어울리는 로맨틱 칵테일 💕",
-    "친구들과 게임할 때 마시면 재미있는 샷 칵테일 모음 🔥",
-  ],
-  food: [
-    "치킨과 찰떡궁합 맥주 대신 칵테일 🍗",
-    "스테이크와 어울리는 레드 베이스 칵테일 🥩",
-    "디저트랑 같이 즐기는 달콤한 칵테일 🍨",
-    "안주 필요 없는 올라운드 칵테일 🥂",
-  ],
-};
-
-function getRandomTema() {
-  const categories = Object.keys(tema);
-  const randomCategory =
-  categories[Math.floor(Math.random() * categories.length)];
-  const items = tema[randomCategory];
-  
-  return items[Math.floor(Math.random() * items.length)];
+function getRandomId(min = 1, max) {
+  if (typeof max !== "number") throw new Error("max가 필요합니다");
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function RecipePreView(){
-  const [text, setText] = useState("");
-
+  const [id, setId] = useState(1);
+  const cocktailId = getRandomId(1, cocktails.length)
   useEffect(() => {
-    setText(getRandomTema());
+    if (cocktails?.length > 0) {
+      const index = Math.floor(Math.random() * cocktails.length) + 1; // 0 ~ length-1
+      setId(cocktails[index]);
+    }
   }, []);
+  const cocktail = cocktails.find(c => c.id === cocktailId);
 
   return(
     <section className="rounded-2xl border border-white/10 p-5 text-white bg-white/5">
@@ -50,7 +30,20 @@ function RecipePreView(){
           더보기 →
         </NavLink>
       </div>
-      {/* <p>{text}</p> */}{/* 오늘의 추천 한잔 밑에 테마에 맞게 텍스트 출력하는 기능 */}
+      <div className="rounded-2xl border border-white/10 bg-white/5 text-center w-[50%] mx-[25%]">
+        <NavLink
+          key={cocktail.slug}
+          to={`/cocktails/${cocktail.slug}`}
+          state={{ cocktails: cocktail }}
+          >
+          <img
+            src={cocktail.image}
+            alt={cocktail.name}
+            className="w-full h-40 object-cover rounded-t-2xl"
+            />
+          <p className="my-auto">{cocktail.name}</p>
+        </NavLink>
+      </div>
     </section>
   );
 }

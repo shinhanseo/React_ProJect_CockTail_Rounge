@@ -10,14 +10,14 @@ function Recipe(){
           key={c.slug}
           to={`/cocktails/${c.slug}`}
           state={{ cocktails: c }}
-          className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden text-center"
+          className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden text-center hover:scale-105 "
         >
           <img
             src={c.image}
             alt={c.name}
             className="w-full h-40 object-cover"
           />
-          <p className="mt-2">{c.name}</p>
+          <p className="my-auto">{c.name}</p>
         </NavLink>
 
         ))}

@@ -20,11 +20,14 @@ function CommunityPreview({ posts = [] }) {
         {latest.map((p) => (
           <li key={p.id} className="py-2 flex items-center gap-3 hover:bg-white/5">
             <span className="text-white/50 w-10 text-center">{++num}</span>
-            <span
-              className="flex-1 hover:cursor-pointer"
+            <NavLink
+              key={p.id}
+              to={`/posts/${p.id}`}
+              state={{posts : p}}
+              className="flex-1 hover:cursor-pointer hover:font-bold"
               title={p.title}>
                 {p.title.length > 15 ? p.title.slice(0, 15) + "..." : p.title}
-            </span>
+            </NavLink>
             <span className="text-white/70 text-sm w-[90px] text-right">{p.user}</span>
           </li>
         ))}
