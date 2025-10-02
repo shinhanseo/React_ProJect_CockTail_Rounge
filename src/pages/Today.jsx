@@ -1,6 +1,6 @@
 function Today() {
     return(
-        <div>레시피</div>
+        <div>취향찾기</div>
     )
 }
 

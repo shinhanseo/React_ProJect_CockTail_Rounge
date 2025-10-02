@@ -1,6 +1,7 @@
 import { cocktails } from "../data/cocktails";
 import { NavLink } from "react-router-dom";
 
+// 칵테일 도감 목록
 function Recipe(){
   return(
     <section>
@@ -15,7 +16,7 @@ function Recipe(){
           <img
             src={c.image}
             alt={c.name}
-            className="w-full h-40 object-cover"
+            className="w-full h-30 object-fill"
           />
           <p className="my-auto">{c.name}</p>
         </NavLink>

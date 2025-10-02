@@ -4,7 +4,7 @@ import { NavLink, useOutletContext } from "react-router-dom";
 function Community() {
   const addPost = (e) => {
     e.preventDefault();
-    // 글 작성 로직 추가
+    // 글 작성 로직 추가 예정
   };
   const { posts, setPosts } = useOutletContext();
 
@@ -20,7 +20,7 @@ function Community() {
             <div className="text-center">작성자</div>
         </li>
 
-        {/* 글 */}
+        {/* 글 목록 */}
         {posts.map((p) => (
             <NavLink
               key={p.id}

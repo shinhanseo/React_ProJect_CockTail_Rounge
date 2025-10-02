@@ -9,7 +9,7 @@ function Header() {
   return (
     <header>
       <nav className="flex items-center justify-between text-white text-sm p-6 border-b border-white/20">
-        {/* 오른쪽 상단 웹 이름 */}
+        {/* 왼쪽 상단 웹 이름 */}
         <p className="font-bold text-xl text-[#17BEBB]"><Link to="/">Cocktail Rounge🍹</Link></p>
         
         {/* 검색창 */}
@@ -25,14 +25,17 @@ function Header() {
             <img src={search} className="w-5 h-5 text-gray-500"></img>
           </button>
         </form>
-        
-        {/*내비게이션 메뉴 항목*/}
+         
+        {/* 내비게이션 메뉴 항목 */}
         <ul className="flex gap-6 list-none text-gray-300"> 
           <li className="hover:font-bold hover:cursor-pointer"><NavLink to="/community" className={navClass}>커뮤니티</NavLink></li>
-          <li className="hover:font-bold hover:cursor-pointer"><NavLink to="/today" className={navClass}>오늘의 한잔</NavLink></li>
+          <li className="hover:font-bold hover:cursor-pointer"><NavLink to="/today" className={navClass}>취향 찾기</NavLink></li>
           <li className="hover:font-bold hover:cursor-pointer"><NavLink to="/recipe" className={navClass}>칵테일 도감</NavLink></li>
-          {/*추가 항목 생성 예정 */}
+          <li className="hover:font-bold hover:cursor-pointer"><NavLink to="/map" className={navClass}>칵테일여지도</NavLink></li>
+          {/* 추가 항목 생성 예정 */}
         </ul>
+        
+        {/* 로그인 버튼 */}
         <p className="hover:font-bold 
                       hover:cursor-pointer 
                     text-white

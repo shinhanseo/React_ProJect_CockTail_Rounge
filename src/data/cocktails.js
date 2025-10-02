@@ -14,6 +14,10 @@ import pinaColadaImg from "../assets/cocktails/pina-colada.jpg";
 import palomaImg from "../assets/cocktails/paloma.jpg";
 import blueHawaiiImg from "../assets/cocktails/blue-hawaii.jpg";
 import espressoMartiniImg from "../assets/cocktails/espresso-martini.jpg";
+import bloodyMaryImg from "../assets/cocktails/bloody-mary.jpg";
+import maiTaiImg from "../assets/cocktails/mai-tai.jpg";
+import sangriaImg from "../assets/cocktails/sangria.jpg";
+import belliniImg from "../assets/cocktails/bellini.jpg";
 
 export const cocktails = [
   {
@@ -33,6 +37,7 @@ export const cocktails = [
       "라임을 짜 넣고 가볍게 스터한다.",
     ],
     image: ginTonicImg,
+    comment: "깔끔한 진과 라임 가볍게"
   },
   {
     id: 2,
@@ -52,6 +57,7 @@ export const cocktails = [
       "민트로 가니시한다.",
     ],
     image: mojitoImg,
+    comment: "민트 상쾌함 시원하게"
   },
   {
     id: 3,
@@ -70,6 +76,7 @@ export const cocktails = [
       "더블 스트레인하여 따른다.",
     ],
     image: margaritaImg,
+    comment: "라임 산뜻함 선명한 맛"
   },
   {
     id: 4,
@@ -88,6 +95,7 @@ export const cocktails = [
       "오렌지 필로 가니시한다.",
     ],
     image: oldFashionedImg,
+    comment: "단맛과 비터 균형 차분함"
   },
   {
     id: 5,
@@ -105,6 +113,7 @@ export const cocktails = [
       "레몬필 또는 올리브로 가니시한다.",
     ],
     image: dryMartiniImg,
+    comment: "매우 드라이 선명한 향"
   },
   {
     id: 6,
@@ -123,6 +132,7 @@ export const cocktails = [
       "오렌지로 가니시한다.",
     ],
     image: negroniImg,
+    comment: "쓴단맛 조화 진득한 여운"
   },
   {
     id: 7,
@@ -141,6 +151,7 @@ export const cocktails = [
       "레몬필 또는 체리로 가니시한다.",
     ],
     image: whiskeySourImg,
+    comment: "상큼달콤 부드러운 폼"
   },
   {
     id: 8,
@@ -159,6 +170,7 @@ export const cocktails = [
       "라임휠로 가니시한다.",
     ],
     image: cosmopolitanImg,
+    comment: "루비빛 산미 깔끔한 마무리"
   },
   {
     id: 9,
@@ -176,6 +188,7 @@ export const cocktails = [
       "차갑게 칠한 글라스에 따른다.",
     ],
     image: daiquiriImg,
+    comment: "라임 직선감 깨끗한 피니시"
   },
   {
     id: 10,
@@ -194,6 +207,7 @@ export const cocktails = [
       "살짝 스터 후 가니시한다.",
     ],
     image: aperolSpritzImg,
+    comment: "오렌지빛 탄산감 여유로운 한 잔"
   },
   {
     id: 11,
@@ -212,6 +226,7 @@ export const cocktails = [
       "라임웨지로 가니시한다.",
     ],
     image: moscowMuleImg,
+    comment: "진저의 톡쏨 상큼한 리프레시"
   },
   {
     id: 12,
@@ -234,6 +249,7 @@ export const cocktails = [
       "레몬 가니시한다.",
     ],
     image: longIslandImg,
+    comment: "진한 바디 달큰한 피니시"
   },
   {
     id: 13,
@@ -252,6 +268,7 @@ export const cocktails = [
       "파인애플/체리로 가니시한다.",
     ],
     image: pinaColadaImg,
+    comment: "코코넛과 파인 부드럽게 달콤"
   },
   {
     id: 14,
@@ -270,6 +287,7 @@ export const cocktails = [
       "가볍게 스터한다.",
     ],
     image: palomaImg,
+    comment: "자몽의 담백한 쌉쌀함 깔끔한 청량감"
   },
   {
     id: 15,
@@ -289,6 +307,7 @@ export const cocktails = [
       "파인애플로 가니시한다.",
     ],
     image: blueHawaiiImg,
+    comment: "달콤 상큼한 트로피컬 톤"
   },
   {
     id: 16,
@@ -307,5 +326,86 @@ export const cocktails = [
       "커피빈 3개로 가니시한다.",
     ],
     image: espressoMartiniImg,
+    comment: "커피 향 분명 달큰한 여운"
+  },  {
+    id: 17,
+    name: "블러디 메리",
+    slug: "bloody-mary",
+    abv: 12,
+    tags: ["보드카", "토마토", "스파이시"],
+    ingredients: [
+      { name: "보드카", amount: "45ml" },
+      { name: "토마토 주스", amount: "90ml" },
+      { name: "레몬 주스", amount: "15ml" },
+      { name: "우스터 소스 & 타바스코", amount: "약간" },
+      { name: "셀러리 소금·후추", amount: "취향" },
+    ],
+    steps: [
+      "글라스에 얼음을 넣는다.",
+      "모든 재료를 붓고 잘 스터한다.",
+      "셀러리 스틱으로 가니시한다.",
+    ],
+    image: bloodyMaryImg,
+    comment: "토마토와 스파이스 해장용 한잔"
+  },
+  {
+    id: 18,
+    name: "마이 타이",
+    slug: "mai-tai",
+    abv: 20,
+    tags: ["럼", "트로피컬", "상큼"],
+    ingredients: [
+      { name: "화이트 럼", amount: "40ml" },
+      { name: "다크 럼", amount: "20ml" },
+      { name: "라임 주스", amount: "20ml" },
+      { name: "오렌지 큐라소", amount: "15ml" },
+      { name: "아몬드 시럽", amount: "15ml" },
+    ],
+    steps: [
+      "쉐이커에 화이트 럼·라임·큐라소·시럽을 넣고 쉐이크한다.",
+      "글라스에 붓고 다크 럼을 플로팅한다.",
+      "라임과 민트로 가니시한다.",
+    ],
+    image: maiTaiImg,
+    comment: "트로피컬 감성 깊은 향"
+  },
+  {
+    id: 19,
+    name: "상그리아",
+    slug: "sangria",
+    abv: 9,
+    tags: ["와인", "과일", "파티"],
+    ingredients: [
+      { name: "레드 와인", amount: "1병" },
+      { name: "브랜디", amount: "60ml" },
+      { name: "오렌지 주스", amount: "120ml" },
+      { name: "사과·오렌지·레몬", amount: "조각" },
+      { name: "탄산수", amount: "적당량" },
+    ],
+    steps: [
+      "큰 피처에 과일 조각을 담는다.",
+      "와인·브랜디·주스를 붓고 냉장 숙성한다.",
+      "잔에 따르고 탄산수로 채운다.",
+    ],
+    image: sangriaImg,
+    comment: "과일 풍성 파티 무드"
+  },
+  {
+    id: 20,
+    name: "벨리니",
+    slug: "bellini",
+    abv: 8,
+    tags: ["스파클링", "복숭아", "이탈리안"],
+    ingredients: [
+      { name: "스파클링 와인(프로세코)", amount: "90ml" },
+      { name: "피치 퓌레", amount: "60ml" },
+    ],
+    steps: [
+      "플루트 글라스에 피치 퓌레를 넣는다.",
+      "스파클링 와인을 천천히 따른다.",
+      "살짝 저어 완성한다.",
+    ],
+    image: belliniImg,
+    comment: "복숭아 달콤 가볍게"
   },
 ];

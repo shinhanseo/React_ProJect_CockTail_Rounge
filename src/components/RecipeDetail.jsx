@@ -2,6 +2,7 @@
 import { useParams, NavLink } from "react-router-dom";
 import { cocktails } from "../data/cocktails";
 
+// 칵테일 도감 레시피 페이지
 export default function RecipeDetail() {
   const { slug } = useParams();
   const cocktail = cocktails.find(c => c.slug === slug);
@@ -9,7 +10,7 @@ export default function RecipeDetail() {
   return (
     <article className="text-white max-w-4xl mx-auto flex gap-6 border-white/10 bg-white/5 rounded-4xl p-12 mt-12">
 	    <div className="flex-1">
-				<NavLink to="/recipe" className="text-sm text-white/70 hover:font-bold">
+			  <NavLink to="/recipe" className="text-sm text-white/70 hover:font-bold">
 					← 목록으로
 				</NavLink>
 
@@ -52,6 +53,7 @@ export default function RecipeDetail() {
 					alt={cocktail.name}
 					className="rounded-xl object-cover w-full h-auto"
 				/>
+                <p className="text-center mt-4 text-gray-300">{cocktail.comment}</p>
 			</div>
 		</article>
   );
