@@ -1,25 +1,32 @@
 import { useEffect, useRef } from "react";
-import { NavLink
+import { NavLink } from "react-router-dom";
+import { bars } from "../data/bars";
 
- } from "react-router-dom";
 function MapPreView(){
-  const mapRef = useRef(null);
-  const lat = 37.5076183;// 위도 
-  const lng = 126.7382614;// 경도 
-    
+   const mapRef = useRef(null);
+
+  // 집 위치
+  const lat_home = 37.5076183;
+  const lng_home = 126.7382614;
+
   useEffect(() => {
     const { naver } = window;
     if (mapRef.current && naver) {
-      const home = new naver.maps.LatLng(lat, lng);
-      // const bar1 = new naver.maps.LatLng(37.49492040000001, 126.7249768);
+      const home = new naver.maps.LatLng(lat_home, lng_home);
+
       const map = new naver.maps.Map(mapRef.current, {
-      center: home,
-      zoom: 15, // 지도 확대 정도
-    });
-    new naver.maps.Marker({
-      position: home, //bar1,
-      map,
-    });
+        center: home,
+        zoom: 15,
+      });
+
+      // bars 배열의 모든 마커 생성
+      bars.forEach((bar) => {
+        new naver.maps.Marker({
+          position: new naver.maps.LatLng(bar.lat, bar.lng),
+          map,
+          title: bar.name,  
+        });
+      });
     }
   }, []);
 
