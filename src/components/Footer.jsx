@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4 py-4 text-xs text-white/60 flex items-center justify-between gap-4">
           <p>© 2025 Cocktail Lounge. All rights reserved.</p>
-          <p className="mr-12 text-lg">
-            <span className="text-[#17BEBB] font-bold">Cocktail Lounge</span>🍹
+          <p className="mr-12 text-lg my-auto">
+            <span className="text-title font-bold">Cocktail Lounge</span>🍹
             오늘의 한잔을 찾다
           </p>
           <div className="flex items-center gap-4">

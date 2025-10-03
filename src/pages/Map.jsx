@@ -33,7 +33,7 @@ export default function Map() {
     <div className="w-full h-[700px]">
       <div
         ref={mapRef}
-        className="w-[80%] h-[80%] rounded-2xl overflow-hidden mx-auto mt-12"
+        className="w-full h-full max-w-[1000px] rounded-2xl overflow-hidden mx-auto mt-12"
       ></div>
     </div>
   );

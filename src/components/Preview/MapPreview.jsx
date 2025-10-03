@@ -36,7 +36,7 @@ export default function MapPreView() {
         <h2 className="text-xl font-bold">칵테일여지도</h2>
         <NavLink
           to="/map"
-          className="text-sm underline underline-offset-4 decoration-2 decoration-[#17BEBB] hover:font-bold"
+          className="text-sm underline underline-offset-4 decoration-2 decoration-underline hover:font-bold"
         >
           더보기 →
         </NavLink>
@@ -44,7 +44,7 @@ export default function MapPreView() {
       <div className="w-full h-full">
         <div
           ref={mapRef}
-          className="w-[80%] h-[80%] rounded-2xl overflow-hidden mx-auto mt-4"
+          className="w-[300px] h-[200px] rounded-2xl overflow-hidden mx-auto mt-4"
         ></div>
       </div>
     </section>

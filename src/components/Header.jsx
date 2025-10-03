@@ -3,14 +3,14 @@ import search from "../assets/search.svg";
 
 const navClass = ({ isActive }) =>
   "hover:font-bold hover:cursor-pointer underline-offset-8 decoration-2 " +
-  (isActive ? "underline decoration-[#17BEBB]" : "no-underline");
+  (isActive ? "underline decoration-underline" : "no-underline");
 
 export default function Header() {
   return (
     <header>
-      <nav className="flex items-center justify-between text-white text-sm p-6 border-b border-white/20">
+      <nav className="flex items-center justify-between text-white text-sm p-6 border-b border-white/10 bg-white/200">
         {/* 왼쪽 상단 웹 이름 */}
-        <p className="font-bold text-xl text-[#17BEBB]">
+        <p className="font-bold text-xl text-title">
           <Link to="/">Cocktail Rounge🍹</Link>
         </p>
 
@@ -33,7 +33,7 @@ export default function Header() {
         </form>
 
         {/* 내비게이션 메뉴 항목 */}
-        <ul className="flex gap-6 list-none text-gray-300">
+        <ul className="flex gap-6 list-none text-white">
           <li className="hover:font-bold hover:cursor-pointer">
             <NavLink to="/community" className={navClass}>
               커뮤니티
@@ -60,15 +60,15 @@ export default function Header() {
         {/* 로그인 버튼 */}
         <p
           className="hover:font-bold 
-                      hover:cursor-pointer 
-                    text-white
-                      px-4 
-                      py-2
-                      border border-[#ff917D] 
-                    bg-[#ff917D] 
-                      rounded-3xl 
-                    hover:bg-[#FF6B6B] 
-                    hover:border-[#FF6B6B]"
+                     hover:cursor-pointer 
+                     text-white
+                     px-4 
+                     py-2
+                     border border-button
+                     bg-button 
+                     rounded-3xl 
+                     hover:bg-button-hover 
+                     hover:border-button-hover"
         >
           <Link to="/login">로그인</Link>
         </p>

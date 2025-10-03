@@ -33,12 +33,12 @@ export default function Login() {
           <input
             type="submit"
             value={"로그인 하기"}
-            className="text-white w-60 h-10 bg-[#ff917D] mt-4 rounded-2xl hover:bg-[#FF6B6B] hover:cursor-pointer"
+            className="text-white w-60 h-10 bg-button mt-4 rounded-2xl hover:bg-button-hover hover:cursor-pointer"
           ></input>
         </form>
         <div className="text-white text-center text-sm mt-2">
           회원이 아니신가요?{" "}
-          <span className="text-[#ff917D] hover:cursor-pointer hover:text-[#FF6B6B]">
+          <span className="text-button hover:cursor-pointer hover:text-button-hover">
             <Link to="/signup">회원가입하기</Link>
           </span>
         </div>

@@ -26,12 +26,12 @@ export default function RecipePreView() {
         <h2 className="text-xl font-bold">오늘의 추천 한잔</h2>
         <NavLink
           to="/recipe"
-          className="text-sm underline underline-offset-4 decoration-2 decoration-[#17BEBB] hover:font-bold"
+          className="text-sm underline underline-offset-4 decoration-2 decoration-underline hover:font-bold"
         >
           더보기 →
         </NavLink>
       </div>
-      <div className="rounded-2xl border border-white/10 bg-white/5 text-center w-[50%] mx-[25%] mt-4">
+      <div className="rounded-2xl border border-white/10 bg-white/5 text-center w-[200px] mx-auto mt-4">
         <NavLink
           key={cocktail.slug}
           to={`/cocktails/${cocktail.slug}`}

@@ -72,7 +72,7 @@ export default function SignUp() {
             <input
               type="submit"
               value={"회원 가입"}
-              className="text-white w-60 h-10 bg-[#ff917D] mt-4 rounded-2xl hover:bg-[#FF6B6B] hover:cursor-pointer hover:font-bold"
+              className="text-white w-60 h-10 bg-button mt-4 rounded-2xl hover:bg-button-hover hover:cursor-pointer hover:font-bold"
             ></input>
           </div>
         </form>
