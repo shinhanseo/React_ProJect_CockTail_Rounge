@@ -1,35 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { bars } from "@/data/bars";
+import MapCard from "../MapCard";
 
 export default function MapPreView() {
-  const mapRef = useRef(null);
-
-  // 집 위치
-  const lat_home = 37.5076183;
-  const lng_home = 126.7382614;
-
-  useEffect(() => {
-    const { naver } = window;
-    if (mapRef.current && naver) {
-      const home = new naver.maps.LatLng(lat_home, lng_home);
-
-      const map = new naver.maps.Map(mapRef.current, {
-        center: home,
-        zoom: 15,
-      });
-
-      // bars 배열의 모든 마커 생성
-      bars.forEach((bar) => {
-        new naver.maps.Marker({
-          position: new naver.maps.LatLng(bar.lat, bar.lng),
-          map,
-          title: bar.name,
-        });
-      });
-    }
-  }, []);
-
   return (
     <section className="rounded-2xl border border-white/10 p-5 bg-white/5">
       <div className="flex items-center justify-between mb-3">
@@ -41,12 +14,7 @@ export default function MapPreView() {
           더보기 →
         </NavLink>
       </div>
-      <div className="w-full h-full">
-        <div
-          ref={mapRef}
-          className="w-[300px] h-[200px] rounded-2xl overflow-hidden mx-auto mt-4"
-        ></div>
-      </div>
+      <MapCard height={200} width={300} />
     </section>
   );
 }
