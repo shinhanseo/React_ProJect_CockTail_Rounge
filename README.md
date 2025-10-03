@@ -1,13 +1,42 @@
-# React + Vite
+# 🍹 Cocktail Lounge (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 칵테일을 사랑하는 사람들을 위한 커뮤니티 & 레시피 플랫폼
 
-Currently, two official plugins are available:
+이 프로젝트는 **React + Vite + Tailwind CSS** 기반으로 제작된 칵테일 커뮤니티 웹 서비스입니다.  
+사용자는 다양한 칵테일 레시피를 탐색하고, 오늘의 추천 한잔을 확인하며, 커뮤니티에서 자유롭게 소통할 수 있습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# React_ProJect_CockTail_Rounge" 
+- **Frontend**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **Linting**: ESLint + Prettier
+
+---
+
+## 📌 Features
+
+- 🥂 **오늘의 추천 한잔**: 랜덤 칵테일 레시피 추천
+- 📖 **레시피 탐색**: 다양한 칵테일 레시피 확인
+- 💬 **커뮤니티 게시판**: 자유롭게 글 작성 및 목록 조회
+- 🎨 **네온 감성 UI**: Tailwind CSS 기반 깔끔한 디자인
+
+---
+
+## 🛠️ Installation & Run
+
+```bash
+# 1. Clone Repository
+git clone https://github.com/yourname/React_ProJect_CockTail_Rounge.git
+
+# 2. Move into project folder
+cd React_ProJect_CockTail_Rounge
+
+# 3. Install dependencies
+npm install
+
+# 4. Run development server
+npm run dev
+```

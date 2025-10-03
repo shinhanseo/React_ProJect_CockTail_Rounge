@@ -76,7 +76,7 @@ export const posts = [
   },
   {
     id: 7,
-    title: "켄터기 뮬 변형 레시피 → 모스큐 뮬",
+    title: "모스큐 뮬 변형 레시피 → 켄터기 뮬",
     user: "jysknk01",
     date: "2025-09-25",
     tags: ["변형레시피", "하이볼"],

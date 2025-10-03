@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { cocktails } from "../data/cocktails";
+import { cocktails } from "@/data/cocktails";
 // 홈화면 레시피 미리보기
 // 램덤 숫자 리턴
 function getRandomId(min = 1, max) {
@@ -8,19 +8,19 @@ function getRandomId(min = 1, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function RecipePreView(){
+export default function RecipePreView() {
   const [id, setId] = useState(1); // id 1로 설정
-  const cocktailId = getRandomId(1, cocktails.length) // 램덤으로 숫자 지정
-  useEffect(() => { 
+  const cocktailId = getRandomId(1, cocktails.length); // 램덤으로 숫자 지정
+  useEffect(() => {
     if (cocktails?.length > 0) {
       const index = Math.floor(Math.random() * cocktails.length) + 1;
       setId(cocktails[index]);
     }
   }, []);
 
-  const cocktail = cocktails.find(c => c.id === cocktailId); // id로 칵테일 찾기
+  const cocktail = cocktails.find((c) => c.id === cocktailId); // id로 칵테일 찾기
 
-  return(
+  return (
     <section className="rounded-2xl border border-white/10 p-5 text-white bg-white/5">
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-xl font-bold">오늘의 추천 한잔</h2>
@@ -36,17 +36,15 @@ function RecipePreView(){
           key={cocktail.slug}
           to={`/cocktails/${cocktail.slug}`}
           state={{ cocktails: cocktail }}
-          >
+        >
           <img
             src={cocktail.image}
             alt={cocktail.name}
             className="w-full h-40 object-cover rounded-t-2xl"
-            />
+          />
           <p className="my-auto">{cocktail.name}</p>
         </NavLink>
       </div>
     </section>
   );
 }
-
-export default RecipePreView;

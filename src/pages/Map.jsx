@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import { bars } from "../data/bars";
+import { bars } from "@/data/bars";
 
-function Map(){
+export default function Map() {
   const mapRef = useRef(null);
 
   // 집 위치
@@ -23,7 +23,7 @@ function Map(){
         new naver.maps.Marker({
           position: new naver.maps.LatLng(bar.lat, bar.lng),
           map,
-          title: bar.name,  
+          title: bar.name,
         });
       });
     }
@@ -31,12 +31,10 @@ function Map(){
 
   return (
     <div className="w-full h-[700px]">
-      <div 
-        ref={mapRef} 
+      <div
+        ref={mapRef}
         className="w-[80%] h-[80%] rounded-2xl overflow-hidden mx-auto mt-12"
       ></div>
     </div>
   );
 }
-
-export default Map;
