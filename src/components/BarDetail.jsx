@@ -31,9 +31,9 @@ export default function BarDetail() {
     <div className="w-full mt-12">
       {/* 제목 */}
       <div className="w-full text-white text-center mb-6">
-        <h2 className="text-2xl font-bold">{city}의 Bar</h2>
+        <h2 className="text-2xl font-bold">{city}</h2>
       </div>
-      <div>
+      <div className="mb-4">
         <NavLink to="/map" className="text-sm text-white/70 hover:font-bold">
           ← 목록으로
         </NavLink>

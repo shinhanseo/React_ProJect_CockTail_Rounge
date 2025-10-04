@@ -66,10 +66,8 @@ export const bars = [
     website: "https://map.naver.com/v5/search/더뮤지엄",
     desc: "아트 갤러리 컨셉의 독특한 분위기를 가진 바"
   },
-
-  // ✅ 서울 추가
   {
-    id: "서울_7",
+    id: "서울_1",
     name: "하이볼팩토리",
     lat: 37.541,
     lng: 127.068,
@@ -80,7 +78,7 @@ export const bars = [
     desc: "성수의 감성을 담은 하이볼 전문 바"
   },
   {
-    id: "서울_8",
+    id: "서울_2",
     name: "라운지 클라우드",
     lat: 37.575,
     lng: 126.978,
@@ -90,10 +88,8 @@ export const bars = [
     website: "https://map.naver.com/v5/search/라운지클라우드",
     desc: "경복궁 야경이 내려다보이는 루프탑 바"
   },
-
-  // ✅ 부산 추가
   {
-    id: "부산_3",
+    id: "부산_1",
     name: "루프탑 웨이브",
     lat: 35.1588,
     lng: 129.1629,
@@ -104,7 +100,7 @@ export const bars = [
     desc: "바다 소리와 함께 여유로운 칵테일 한 잔"
   },
   {
-    id: "부산_4",
+    id: "부산_2",
     name: "오션바 블루문",
     lat: 35.095,
     lng: 129.035,
@@ -114,10 +110,8 @@ export const bars = [
     website: "https://map.naver.com/v5/search/오션바블루문",
     desc: "감각적인 인테리어의 해운대 오션뷰 라운지"
   },
-
-  // ✅ 전라도 추가
   {
-    id: "전라도_3",
+    id: "전라도_1",
     name: "라운지 한옥",
     lat: 35.817,
     lng: 127.153,
@@ -128,7 +122,7 @@ export const bars = [
     desc: "전통 한옥 감성과 현대적인 칵테일이 만나는 공간"
   },
   {
-    id: "전라도_4",
+    id: "전라도_2",
     name: "카페앤바 파도소리",
     lat: 34.743,
     lng: 127.737,
@@ -138,10 +132,8 @@ export const bars = [
     website: "https://map.naver.com/v5/search/파도소리바",
     desc: "여수 밤바다의 낭만을 그대로 담은 오션뷰 라운지"
   },
-
-  // ✅ 경상도 추가
   {
-    id: "경상도_4",
+    id: "경상도_1",
     name: "문라이트 라운지",
     lat: 35.869,
     lng: 128.601,
@@ -152,7 +144,7 @@ export const bars = [
     desc: "은은한 조명과 감성 재즈가 어우러진 라운지 바"
   },
   {
-    id: "경상도_5",
+    id: "경상도_2",
     name: "하모니 바",
     lat: 35.228,
     lng: 128.683,
@@ -162,10 +154,8 @@ export const bars = [
     website: "https://map.naver.com/v5/search/하모니바",
     desc: "분위기 좋은 창원 중심의 칵테일 라운지"
   },
-
-  // ✅ 충청도 추가
   {
-    id: "충청도_3",
+    id: "충청도_1",
     name: "트와일라잇",
     lat: 36.353,
     lng: 127.379,
@@ -176,7 +166,7 @@ export const bars = [
     desc: "도심 속 은은한 조명 아래 즐기는 하이볼"
   },
   {
-    id: "충청도_4",
+    id: "충청도_2",
     name: "카페바 라포레",
     lat: 36.806,
     lng: 127.147,
@@ -186,10 +176,8 @@ export const bars = [
     website: "https://map.naver.com/v5/search/라포레",
     desc: "천안 불당의 핫플, 식물 감성 가득한 칵테일 라운지"
   },
-
-  // ✅ 경기도 추가
   {
-    id: "경기도_3",
+    id: "경기도_1",
     name: "레이지선셋",
     lat: 37.392,
     lng: 126.957,
@@ -200,7 +188,7 @@ export const bars = [
     desc: "평촌의 노을 뷰와 어울리는 감성 하이볼 바"
   },
   {
-    id: "경기도_4",
+    id: "경기도_2",
     name: "바 더그레이스",
     lat: 37.654,
     lng: 127.062,
@@ -210,10 +198,8 @@ export const bars = [
     website: "https://map.naver.com/v5/search/더그레이스",
     desc: "의정부 도심 속 모던한 무드의 프리미엄 바"
   },
-
-  // ✅ 강원도 추가
   {
-    id: "강원도_2",
+    id: "강원도_1",
     name: "오션하이볼",
     lat: 37.788,
     lng: 128.915,
@@ -224,7 +210,7 @@ export const bars = [
     desc: "강릉 경포 해변의 감성적인 하이볼 라운지"
   },
   {
-    id: "강원도_3",
+    id: "강원도_2",
     name: "라운지 노을빛",
     lat: 37.342,
     lng: 127.939,
@@ -234,10 +220,8 @@ export const bars = [
     website: "https://map.naver.com/v5/search/라운지노을빛",
     desc: "원주 도심에서 즐기는 노을 감성 칵테일 바"
   },
-
-  // ✅ 제주 추가
   {
-    id: "제주_2",
+    id: "제주_1",
     name: "선셋라운지",
     lat: 33.247,
     lng: 126.408,
@@ -248,7 +232,7 @@ export const bars = [
     desc: "중문 바다 위 석양을 바라보며 즐기는 칵테일 한 잔"
   },
   {
-    id: "제주_3",
+    id: "제주_2",
     name: "스톤바 하이볼",
     lat: 33.507,
     lng: 126.529,
