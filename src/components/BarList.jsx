@@ -1,8 +1,8 @@
 import { bars } from "@/data/bars";
 
-export default function BarList() {
+export default function BarList({ onBarSelect }) {
   return (
-    <ul className="mr-12">
+    <ul className="mr-12 overflow-scroll overflow-x-hidden h-[500px]">
       <li
         className="grid grid-cols-[200px_200px] sm:grid-cols-[200px_200px]
         font-bold text-2xl border-white/10 border-b-4 pb-2 mb-2 text-center
@@ -17,7 +17,12 @@ export default function BarList() {
           className="grid grid-cols-[200px_200px] sm:grid-cols-[200px_200px]
                      border-white/10 border-b-4 py-2 hover:bg-white/5"
         >
-          <div className="text-center">{b.name}</div>
+          <div
+            className="text-center cursor-pointer hover:text-teal-400 transition-colors"
+            onClick={() => onBarSelect && onBarSelect(b)}
+          >
+            {b.name}
+          </div>
           <div className="text-center">{b.address}</div>
         </li>
       ))}

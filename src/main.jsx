@@ -13,6 +13,7 @@ import Today from "@/pages/Today";
 import Recipe from "@/pages/Recipe";
 import RecipeDetail from "@/components/Recipe/RecipeDetail";
 import Map from "@/pages/Map";
+import BarDetail from "@/components/BarDetail";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -29,6 +30,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="map" element={<Map />} />
             <Route path="recipe" element={<Recipe />} />
             <Route path="cocktails/:slug" element={<RecipeDetail />} />
+            <Route path="bars/:city" element={<BarDetail />} />
           </Route>
         </Route>
       </Routes>
