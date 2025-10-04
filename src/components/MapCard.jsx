@@ -32,13 +32,13 @@ export default function Map({ height = 500, width = 1000 }) {
 
       naver.maps.Event.addListener(marker, "click", () => {
         const content = `
-          <div class="p-3 min-w-[200px] text-white text-sm leading-relaxed bg-[#111827] border border-white rounded-md -translate-y-2.5">
+          <div class="p-3 min-w-[200px] text-white text-sm bg-[#111827] border border-white rounded-md">
             <div class="font-bold text-base mb-1">${bar.name}</div>
             <div class="mb-1">📍 ${bar.address}</div>
             <div class="mb-1">☎ ${bar.phone}</div>
             <div class="mb-2">${bar.desc}</div>
             <a href="${bar.website}" target="_blank" rel="noopener"
-               class="text-teal-400 underline hover:font-bold">네이버지도에서 보기</a>
+               class="text-teal-400 hover:font-bold">네이버지도에서 보기</a>
           </div>
         `;
         infoWindowRef.current.setContent(content);
@@ -52,7 +52,7 @@ export default function Map({ height = 500, width = 1000 }) {
   }, []);
 
   return (
-    <div className="w-full">
+    <div>
       <div
         ref={mapRef}
         // Tailwind로는 동적 px 불가 → style 사용
