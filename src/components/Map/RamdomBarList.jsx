@@ -1,8 +1,47 @@
-import { bars } from "@/data/bars";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { barsAPI } from "@/services/api";
 
 export default function RamdomBarList() {
-  const popularBars = bars.slice(0, 3);
+  const [popularBars, setPopularBars] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPopularBars = async () => {
+      try {
+        setLoading(true);
+        const response = await barsAPI.getBars({ size: 3 });
+        setPopularBars(response.items || []);
+      } catch (err) {
+        console.error("Failed to fetch popular bars:", err);
+        setPopularBars([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPopularBars();
+  }, []);
+
+  if (loading) {
+    return (
+      <>
+        {[...Array(3)].map((_, idx) => (
+          <div
+            key={idx}
+            className="flex items-center gap-3 p-2 rounded-lg bg-white/5 animate-pulse"
+          >
+            <div className="w-2 h-2 bg-gray-400 rounded-full flex-shrink-0"></div>
+            <div className="flex-1 min-w-0">
+              <div className="h-4 bg-gray-400 rounded mb-1"></div>
+              <div className="h-3 bg-gray-400 rounded w-3/4"></div>
+            </div>
+            <div className="w-4 h-4 bg-gray-400 rounded"></div>
+          </div>
+        ))}
+      </>
+    );
+  }
 
   return (
     <>
