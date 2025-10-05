@@ -13,7 +13,7 @@ import Today from "@/pages/Today";
 import Recipe from "@/pages/Recipe";
 import RecipeDetail from "@/components/Recipe/RecipeDetail";
 import Map from "@/pages/Map";
-import BarDetail from "@/components/BarDetail";
+import BarDetail from "@/components/Map/BarDetail";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

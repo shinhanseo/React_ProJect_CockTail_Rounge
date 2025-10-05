@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { bars } from "@/data/bars";
 import { NavLink } from "react-router-dom";
-import MapCard from "./MapCard";
+import MapCard from "@/components/Map/MapCard";
 
 export default function BarDetail() {
   const { city } = useParams();

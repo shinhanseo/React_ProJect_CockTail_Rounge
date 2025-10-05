@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import MapCard from "../MapCard";
+import RamdomBarList from "@/components/Map/RamdomBarList";
 
 export default function MapPreView() {
   return (
@@ -14,7 +13,12 @@ export default function MapPreView() {
           더보기 →
         </NavLink>
       </div>
-      <MapCard height={200} width={300} />
+
+      {/* 인기 바 미리보기 카드들 */}
+      <div className="space-y-2">
+        <h3 className="text-sm font-semibold text-gray-300 mb-2">🔥 인기 바</h3>
+        <RamdomBarList />
+      </div>
     </section>
   );
 }

@@ -21,7 +21,7 @@ export default function CommunityPreview() {
         {latest.map((p) => (
           <li
             key={p.id}
-            className="py-2 flex items-center gap-3 hover:bg-white/5"
+            className="py-2 flex items-center gap-3 hover:bg-white/5 hover:rounded-2xl"
           >
             <span className="text-white/50 w-10 text-center">{++num}</span>
             <NavLink

@@ -31,7 +31,7 @@ export default function RecipePreView() {
           더보기 →
         </NavLink>
       </div>
-      <div className="rounded-2xl border border-white/10 bg-white/5 text-center w-[200px] mx-auto mt-4">
+      <div className="rounded-2xl border border-white/10 bg-white/5 text-center w-[200px] mx-auto mt-4 hover:scale-105">
         <NavLink
           key={cocktail.slug}
           to={`/cocktails/${cocktail.slug}`}
