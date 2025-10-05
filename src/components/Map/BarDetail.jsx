@@ -1,69 +1,28 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { bars } from "@/data/bars";
 import { NavLink } from "react-router-dom";
 import MapCard from "@/components/Map/MapCard";
-import { barsAPI } from "@/services/api";
 
 export default function BarDetail() {
   const { city } = useParams();
   const [selectedBar, setSelectedBar] = useState(null);
-  const [filteredBars, setFilteredBars] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  // 도시 변경 시 선택 초기화 및 데이터 로드
+  // 도시 변경 시 선택 초기화(권장)
   useEffect(() => {
     setSelectedBar(null);
-    setLoading(true);
-    setError(null);
-
-    const fetchBars = async () => {
-      try {
-        const response = await barsAPI.getBars({ city });
-        setFilteredBars(response.items || []);
-      } catch (err) {
-        console.error("Failed to fetch bars:", err);
-        setError("바 정보를 불러오는데 실패했습니다.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (city) {
-      fetchBars();
-    }
   }, [city]);
 
   const handleBarSelect = (bar) => setSelectedBar(bar);
+
+  // 도시별로 필터링
+  const filteredBars = city ? bars.filter((b) => b.city === city) : [];
 
   if (!city) {
     return (
       <div className="text-white text-center py-10">
         <h2 className="text-2xl font-bold mb-4">도시를 선택해주세요</h2>
         <p>BarCity에서 원하는 도시를 클릭하세요.</p>
-      </div>
-    );
-  }
-
-  if (loading) {
-    return (
-      <div className="text-white text-center py-10">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-        <p>바 정보를 불러오는 중...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="text-white text-center py-10">
-        <p className="text-red-400 mb-4">{error}</p>
-        <button
-          onClick={() => window.location.reload()}
-          className="px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700"
-        >
-          다시 시도
-        </button>
       </div>
     );
   }
